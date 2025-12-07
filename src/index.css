@@ -1,0 +1,295 @@
+:root {
+    /* Updated Colors for a Weather App Theme */
+    --color-bg-dark: #0f172a; /* Slate 900 */
+    --color-bg-medium: #1e293b; /* Slate 800 */
+    --color-primary: #3b82f6; /* Blue 500 (Attractive sky color) */
+    --color-secondary: #60a5fa; /* Blue 400 */
+    --color-text-light: #f1f5f9; /* Slate 100 */
+    --color-text-muted: #94a3b8; /* Slate 400 */
+    --color-temp: #fcd34d; /* Amber for temperature highlight */
+    
+    --font-mono: 'Roboto Mono', monospace;
+    font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+    color: var(--color-text-light);
+    background: var(--color-bg-dark);
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically for weather app */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* App Container and Responsiveness */
+.app-container {
+    width: 100%;
+    max-width: 480px; 
+    background: var(--color-bg-medium);
+    padding: 32px 24px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 15px var(--color-primary);
+    border: 1px solid #334155;
+}
+
+.title-style {
+    font-size: 1.75rem;
+    font-weight: 800;
+    text-align: center;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+    /* Removed bottom border for cleaner look */
+}
+
+/* --- Search Bar Specifics --- */
+.search-bar-grid {
+    display: flex;
+    gap: 10px;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 2px solid #334155;
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+.search-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.search-button {
+    padding: 0.75rem 1rem;
+}
+
+/* --- Weather Display Card --- */
+.weather-display-card {
+    background-color: var(--color-bg-dark);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.location-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: var(--color-secondary);
+}
+
+.location-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.weather-details-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.icon-condition-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.weather-icon svg {
+    width: 80px;
+    height: 80px;
+    color: var(--color-temp); /* Color of the icon */
+    stroke-width: 1.5;
+}
+
+.condition-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    margin-top: 8px;
+}
+
+.temp-box {
+    line-height: 1.1;
+}
+
+.temperature-large {
+    font-family: var(--font-mono);
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--color-temp);
+}
+
+.temperature-small {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-top: -10px;
+}
+
+.info-footer {
+    padding-top: 20px;
+    border-top: 1px solid #334155;
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: #475569;
+    text-align: right;
+}
+
+/* --- Placeholder/Loading --- */
+.weather-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 200px;
+    color: var(--color-text-muted);
+    padding: 24px;
+    border: 2px dashed #334155;
+    border-radius: 12px;
+}
+.weather-placeholder svg {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+.loading-message {
+    text-align: center;
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+}
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid var(--color-text-light);
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* --- Button Overrides (General) --- */
+.button-base {
+    padding: 0.85rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+.button-primary {
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
+}
+.button-primary:hover:not(:disabled) {
+    background-color: var(--color-secondary);
+}
+.button-base:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* --- Modal Styling (Custom Alert) --- */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: var(--color-bg-medium);
+    border-radius: 12px;
+    padding: 24px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--color-primary);
+    animation: fadeIn 0.3s ease-out;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #334155;
+    margin-bottom: 16px;
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ef4444; /* Red for Error/Alert */
+}
+
+.modal-close {
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+.modal-close:hover {
+    color: var(--color-text-light);
+}
+
+.modal-body {
+    font-size: 1rem;
+    color: var(--color-text-light);
+    margin-bottom: 24px;
+}
+
+.modal-footer {
+    text-align: right;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* General Cleanup */
+h1, h2, h3, p {
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+    .temperature-large {
+        font-size: 3.5rem;
+    }
+    .location-name {
+        font-size: 1.4rem;
+    }
+    .weather-icon svg {
+        width: 60px;
+        height: 60px;
+    }
+}
