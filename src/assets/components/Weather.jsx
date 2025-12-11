@@ -3,7 +3,7 @@ import React, { useState, useCallback, useMemo } from 'react';
 // --- API Configuration ---
 // !!! IMPORTANT: The key provided here ('1b051b5639028a9ce14c73f49b15a912') is assumed to be YOUR valid key.
 // If the error persists, the key may not be active yet (can take 1-2 hours).
-const API_KEY = '1b051b5639028a9ce14c73f49b15a912'; 
+const API_KEY = ''; 
 const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 // --- Icons (using inline SVG for simplicity) ---
