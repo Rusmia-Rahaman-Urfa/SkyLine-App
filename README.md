@@ -1,18 +1,66 @@
-# React + Vite
+# 🚀 SkyLine App - Digital Weather Knowledge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**SkyLine App** is a premium, full-stack digital asset platform designed to "Supercharge Your Digital Workflow". Built with a focus on speed, scalability, and high-end aesthetics, it provides users with a seamless experience for browsing, managing, and purchasing premium digital tools.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🚀 Project Overview
+SkyLine App is engineered to handle complex digital product distributions with an intuitive user journey. It bridges the gap between functional e-commerce and high-fidelity design, ensuring a professional atmosphere for both creators and consumers.
 
-## React Compiler
+* **Premium Design System**: Utilizes a specific "Vivid Purple" and "Deep Navy" color palette for a modern, high-tech feel.
+* **Performance First**: Optimized using Vite for lightning-fast build times and smooth client-side rendering.
+* **State-Driven UX**: Features a robust React Context-based shopping cart for global state persistence across the platform.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+---
 
-Note: This will impact Vite dev & build performances.
+### 🛠️ Technology Stack
+* **Frontend**: React.js (Component-based architecture)
+* **Build Tool**: Vite (Next-generation frontend tooling)
+* **Styling**: Tailwind CSS & DaisyUI for rapid, consistent UI development
+* **State Management**: React Context API (Cart Logic)
+* **Code Quality**: ESLint configuration for standardized development practices
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✨ Main Features
+* **City Searching**: Can know the weather information by searching city name of any country.
+* **Temperature**: It can show the temperature by Celcious and Fahrenheight
+* **Weather Possibility**: It can show it is rainy or hazy. 
+
+---
+
+### 📦 Project Structure
+As per the repository architecture:
+* `/src/components`: Modular UI elements like `Banner.jsx`, `Navbar.jsx`, and `ProductCard.jsx`.
+* `/src/context`: `CartContext.jsx` for managing global application state.
+* `/src/data`: `products.json` containing the centralized product database.
+* `/public/assets`: High-resolution iconography and brand-specific imagery.
+
+---
+
+### 💻 Local Installation Guide
+
+1.  **Clone the Repository**:
+    ```bash
+    git clone https://github.com/Rusmia-Rahaman-Urfa/SkyLine-App/
+    ```
+
+2.  **Install Dependencies**:
+    ```bash
+    npm install
+    ```
+
+3.  **Run the Development Server**:
+    ```bash
+    npm run dev
+    ```
+
+---
+
+### 🔗 Relevant Links
+* **Live Demo**: https://skyline-app-031cd0.netlify.app/
+* **Project Lead**: Rusmia Rahaman Urfa
+
+---
+
+**Developed with 💜 by Rusmia Rahaman Urfa**
