@@ -42,7 +42,7 @@ As per the repository architecture:
 
 1.  **Clone the Repository**:
     ```bash
-    git clone https://github.com/Rusmia-Rahaman-Urfa/SkyLine-App/
+    git clone https://github.com/Rusmia-Rahaman-Urfa/SkyLine-App.git
     ```
 
 2.  **Install Dependencies**:
